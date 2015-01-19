@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="bookDir">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+
+  <body class="container" ng-controller="LibraryController as liber">
+    
+    <nav class="bg-primary" role="navigation">
+      <div class="row">
+        <div class="col-xs-4">
+          <h1 class="text-left">Library </h1>
+        </div>
+
+        <div class="col-xs-8">
+          <h2 class="text-right">| Raphael Norwitz</h2>
+        </div>
+
+      </div>
+    </nav>
+
+    <br>
+    
+      <div class="text-right" ng-contoller="SearchController as search">
+        <!--Sidebar content-->
+
+        Search: <input ng-model="query">
+        <button>Search</button>
+
+      <br>
+      <br>
+      </div>
+
+  
+    <div class="container-fluid">
+
+    <div class="row">
+          <div ng-repeat="book in liber.books | filter:query">
+            <div class="col-xs-4">
+              <h3><a href="{{book.url}}"> {{book.name}} </a></h3>
+              <h4>{{book.author}}</h4>
+              <p>{{book.description}}</p>
+            </div>
+           </div>
+        
+    </div>
+
+
+    
+    <b>
+    <b>
+
+      
+    
+  </body>
+</html>

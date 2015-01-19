@@ -1,0 +1,42 @@
+     <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" id="ng-app" ng-app="app"> <!--<![endif]-->
+  <head>
+    <title>Angucomplete Alt: Autocomplete Directive for AngularJS</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="css/structure.css"/>
+    <link rel="stylesheet" href="css/angucomplete-alt.css"/>
+    <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
+    </head>
+  <body ng-controller="MainController">
+    <!--[if lt IE 9]>
+      <script src="js/libs/es5-shim.min.js"></script>
+      <script src="js/libs/json3.min.js"></script>
+    <![endif]-->
+
+     <div class="large-padded-row">
+
+        <h3><a name="example2" class="page-anchor">Example 2 - People</a></h3>
+        <div class="padded-row">
+          <div angucomplete-alt id="ex2" placeholder="Search books" pause="300" selected-object="selectedBook" local-data="book" search-fields="name,author,description" title-field="name,author" description-field="twitter" image-field="pic" minlength="1" input-class="form-control form-control-small" match-class="highlight">
+          </div>
+        </div>
+        <div class="result">
+          <div class="" ng-show="selectedBook">
+            You selected <span class="bold-span">{{selectedBook.originalObject.name}} {{selectedBook.originalObject.author}}</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-touch.min.js"></script>
+      <script src="bower_components/angucomplete-alt/angucomplete-alt.js"></script>
+      <script src="appAuto2.js"></script>
+    </div>
+  </body>
+</html>
